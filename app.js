@@ -1,4 +1,4 @@
- const icons = ["fas fa-tree", "fas fa-bug", "fas fa-robot", "fas fa-link", "fas fa-laptop", "fas fa-key", "fas fa-car-crash", "fas fa-sort-numeric-down"]
+ const icons = ["fas fa-tree", "fas fa-bug", "fas fa-list", "fas fa-link", "fas fa-sync-alt", "fas fa-key", "fas fa-car-crash", "fas fa-sort-numeric-down"]
 
  const mainContainer = document.querySelector('#main-contain')
 

@@ -34,10 +34,10 @@ i {
 .fa-bug {
     color: #e6194B;
 }
-.fa-robot {
+.fa-list {
     color: #469990;
 }
-.fa-laptop {
+.fa-sync-alt {
     color: #4363d8;
 }
 .fa-key {
@@ -52,9 +52,3 @@ i {
 .fa-sort-numeric-down {
 color: #a9a9a9;
 }
-
-
-     /*const colors = ['#3a0088', '#930077', '#e61c5d', '#ffbd39'];*/
-
-
-/*fas fa-drum", "fas fa-child", "fas fa-music", "fas fa-bolt", "fas fa-socks", "fas fa-car-crash", "fas fa-glasses"*/
