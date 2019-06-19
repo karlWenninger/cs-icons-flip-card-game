@@ -1,26 +1,29 @@
 * {
-    margin: auto;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
 }
 
 #main-contain {
-    box-sizing: border-box;
+    margin-top: 100px;
 }
 
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(4, 22%);
-    grid-gap: 0.5rem;
-    margin-top: 10vh;
-    width: 60%;
+.flex-contain {
+    width: 470px;
 }
 
-.grid-item {
-    text-align: center;
-    width: 100%;
-    /*height: 20%;*/
+.row {
+    display: flex;
+    margin: .5em 0;
+}
+
+.cell {
+    display: flex;
+    align-items: center;
+    width: 105px;
+    height: 105px;
     font-size: 2.5em;
     background: #eee;
-    padding: 1rem 0;
 }
 
 
