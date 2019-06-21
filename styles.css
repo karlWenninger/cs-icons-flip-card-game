@@ -6,11 +6,19 @@
 
 #main-contain {
     width: 470px;
-    margin-top: 50px;
+    margin-top: 70px;
 }
 
-#documentation {
-	margin-bottom: 25px;
+#instructions {
+	margin-bottom: 50px;
+	font-family: monospace;
+	width: 320px;
+}
+h3 {
+	margin-bottom: .5em;
+}
+li {
+	text-align: left;
 }
 table {
     width: 100%;
@@ -22,8 +30,12 @@ td {
     width: 33%; 
 }
 
+#new-game-btn {
+	cursor: pointer;
+}
 
-.flex-contain {
+
+.flex-table {
     width: 100%;
 }
 
@@ -42,12 +54,10 @@ td {
 }
 
 
-/*
+
 .fa-sync-alt {
     color: #4363d8;
 }
-
-*/
 
 .fa-tree {
     color: #3cb44b;
@@ -59,11 +69,6 @@ td {
 
 .fa-list {
     color: #469990;
-}
-
-.fa-microchip {
-    color: #777;
-    /*color: #a9a9a9;*/
 }
 
 .fa-key {

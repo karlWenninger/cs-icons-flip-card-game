@@ -1,20 +1,30 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>flip the card</title>
+    <title>memory game</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 </head>
+
 <body>
     <div id="main-contain">
-    	<div id="documentation"><img src="arnie.png" width="50px"> i will instruct you</div>
-    	<table id="stats">
-    		<tr>
-    			<td id="game-clock-cell"></td>
-    			<td id="click-count-cell"></td>
-    			<td id="new-game-btn" class="fa fa-redo"></td>
-    		</tr>
-    	</table>
+        <div id="instructions">
+            <h4>cs icons</h4>
+            <h3>memory game</h3>
+            <ul>
+                <li>click cell to reveal hidden icon</li>
+                <li>each icon has a match in the grid</li>
+                <li>match icon pairs with consecutive clicks</li>
+            </ul>
+        </div>
+        <table id="stats">
+            <tr>
+                <td id="game-clock-display"></td>
+                <td id="click-count-display"></td>
+                <td id="new-game-btn">new game</td>
+            </tr>
+        </table>
     </div>
     <script src="app.js"></script>
 </body>
