@@ -1,0 +1,84 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+}
+
+#main-contain {
+    width: 470px;
+    margin-top: 50px;
+}
+
+#documentation {
+	margin-bottom: 25px;
+}
+table {
+    width: 100%;
+    font-family: monospace;
+    font-weight: bold;
+}
+
+td {
+    width: 33%; 
+}
+
+
+.flex-contain {
+    width: 100%;
+}
+
+.row {
+    display: flex;
+    margin: .5em 0;
+}
+
+.cell {
+    display: flex;
+    align-items: center;
+    width: 105px;
+    height: 105px;
+    font-size: 2.5em;
+    background: #eee;
+}
+
+
+/*
+.fa-sync-alt {
+    color: #4363d8;
+}
+
+*/
+
+.fa-tree {
+    color: #3cb44b;
+}
+
+.fa-bug {
+    color: #e6194B;
+}
+
+.fa-list {
+    color: #469990;
+}
+
+.fa-microchip {
+    color: #777;
+    /*color: #a9a9a9;*/
+}
+
+.fa-key {
+    color: #9A6324;
+}
+
+.fa-car-crash {
+    color: #f58231;
+}
+
+.fa-link {
+    color: #808000;
+}
+
+.fa-sort-numeric-down {
+    color: #4363d8;
+}
+
