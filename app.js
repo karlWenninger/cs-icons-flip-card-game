@@ -1,6 +1,6 @@
  const icons = ["fas fa-tree", "fas fa-bug", "fas fa-list", "fas fa-link", "fas fa-sync-alt", "fas fa-key", "fas fa-car-crash", "fas fa-sort-numeric-down"]
 
- const mainContain = document.querySelector('#main-contain')
+ const mainContain = document.querySelector('#main-contain');
 
  const clickCountDisplay = document.querySelector('#click-count-display');
 
@@ -14,7 +14,7 @@
      totalClicks = 0;
      userMatches = 0;
      clickCountDisplay.innerText = `${totalClicks} clicks`;
-     gameClockDisplay.innerText = 'time 0:00'
+     gameClockDisplay.innerText = 'time 0:00';
 
      // make icon index array
      let iconIndexArr = [];
@@ -47,25 +47,33 @@
      };
      mainContain.appendChild(flexTable);
  };
- // on page load
- document.addEventListener('DOMContentLoaded', () => {
-     makeGrid()
- });
 
- const newGameBtn = document.querySelector('#new-game-btn');
- newGameBtn.addEventListener('click', () => {
-     clearInterval(startClock);
-     flexTable.innerHTML = null;
-     makeGrid();
- });
+ let endgame = false;
 
- const gameClock = () => gameClockDisplay.innerText = `time :${Math.floor((Date.now() - startTime) / 1000)}`;
+ function gameClock() {
+     let clock;
+     let timeElapsed = Math.floor((Date.now() - startTime) / 1000);
+     if (timeElapsed < 10) {
+         clock = gameClockDisplay.innerText = `time 0:0${timeElapsed}`
+     } else {
+         clock = gameClockDisplay.innerText = `time 0:${timeElapsed}`
+     }
+     // console.log(timeElapsed);
+     if (timeElapsed == 45) {
+         flexTable.style.opacity = '0.4';
+         clearInterval(startClock);
+         gameClockDisplay.style.color = 'red';
+         return endgame = true;
+     } else {
+         return clock;
+     };
+ }
 
  let firstClick, userMatches, totalClicks, startClock, startTime;
 
  // start/stop stats, track user clicks, click order: if no match lastClick becomes firstClick
  flexTable.addEventListener('click', (e) => {
-     if (e.target.className != 'cell') {
+     if (e.target.className != 'cell' || endgame == true) {
          return;
      } else {
          // track user clicks
@@ -96,4 +104,16 @@
              return lastClick.style.visibility = 'hidden';
          }, 500)
      }
+ });
+
+ // on page load
+ document.addEventListener('DOMContentLoaded', () => {
+     makeGrid()
+ });
+
+ const newGameBtn = document.querySelector('#new-game-btn');
+ newGameBtn.addEventListener('click', () => {
+     clearInterval(startClock);
+     flexTable.innerHTML = null;
+     makeGrid();
  });
