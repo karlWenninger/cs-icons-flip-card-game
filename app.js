@@ -6,15 +6,18 @@
 
  const gameClockDisplay = document.querySelector('#game-clock-display')
 
- let flexTable = document.createElement('div');
+ const flexTable = document.createElement('div');
  flexTable.className = 'flex-table';
 
+ const timesUpRule = document.querySelector('#times-up-rule');
+
  function makeGrid() {
-     // initial stat display
+     // set game start defaults
      totalClicks = 0;
-     userMatches = 0;
      clickCountDisplay.innerText = `${totalClicks} clicks`;
      gameClockDisplay.innerText = 'time 0:00';
+     userMatches = 0;
+     timesUp = false;
 
      // make icon index array
      let iconIndexArr = [];
@@ -48,32 +51,28 @@
      mainContain.appendChild(flexTable);
  };
 
- let endgame = false;
 
  function gameClock() {
-     let clock;
-     let timeElapsed = Math.floor((Date.now() - startTime) / 1000);
-     if (timeElapsed < 10) {
-         clock = gameClockDisplay.innerText = `time 0:0${timeElapsed}`
+     const timeElapsed = Math.floor((Date.now() - startTime) / 1000);
+     if (timeElapsed < 45) {
+         gameClockDisplay.innerText = `time 0:0${timeElapsed}`
      } else {
-         clock = gameClockDisplay.innerText = `time 0:${timeElapsed}`
+         gameClockDisplay.innerText = `time 0:${timeElapsed}`
      }
-     // console.log(timeElapsed);
      if (timeElapsed == 45) {
          flexTable.style.opacity = '0.4';
          clearInterval(startClock);
-         gameClockDisplay.style.color = 'red';
-         return endgame = true;
-     } else {
-         return clock;
+         timesUpRule.className = 'underline-flash';
+         return timesUp = true;
      };
  }
 
- let firstClick, userMatches, totalClicks, startClock, startTime;
+
+ let firstClick, userMatches, totalClicks, startClock, startTime, timesUp;
 
  // start/stop stats, track user clicks, click order: if no match lastClick becomes firstClick
  flexTable.addEventListener('click', (e) => {
-     if (e.target.className != 'cell' || endgame == true) {
+     if (e.target.className != 'cell' || timesUp == true) {
          return;
      } else {
          // track user clicks
@@ -99,7 +98,6 @@
                  return firstClick = null;
              }
          } else { firstClick = lastClick; }
-
          setTimeout(() => {
              return lastClick.style.visibility = 'hidden';
          }, 500)
@@ -113,7 +111,10 @@
 
  const newGameBtn = document.querySelector('#new-game-btn');
  newGameBtn.addEventListener('click', () => {
+     timesUpRule.className = null;
+     timesUp = false;
      clearInterval(startClock);
      flexTable.innerHTML = null;
+     flexTable.style.opacity = '1';
      makeGrid();
  });
