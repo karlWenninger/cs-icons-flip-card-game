@@ -7,16 +7,16 @@
 
 #main-contain {
     width: 470px;
-    margin-top: 70px;
+    margin-top: 3em;
 }
 
 #instructions {
-    margin-bottom: 30px;
+    margin-bottom: 2em;
     width: 320px;
 }
 
 h3 {
-    margin-bottom: .5em;
+    margin-bottom: 1em;
 }
 
 li {
@@ -31,10 +31,13 @@ th {
     font-weight: bold;
 }
 
-td {
-    width: 33%;
-}
+/*td {
+    width: 33.3%;
+}*/
 
+#click-count-display {
+    width: 35%;
+}
 
 #new-game-btn {
     cursor: pointer;
@@ -47,7 +50,7 @@ td {
 
 .row {
     display: flex;
-    margin: .5em 0;
+    margin: .8em 0;
 }
 
 .cell {
@@ -60,14 +63,13 @@ td {
 }
 
 .underline-flash {
-    animation: underline 1.8s infinite;
+    animation: underline 2s infinite;
 }
 
 @keyframes underline {
     from {
         text-decoration: underline;
     }
-
     to {
         text-decoration: none;
     }
