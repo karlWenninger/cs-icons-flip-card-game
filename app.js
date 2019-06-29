@@ -1,11 +1,8 @@
+// get HTML stuff
 const mainContain = document.querySelector('#main-contain');
-
 const clickCountDisplay = document.querySelector('#click-count-display');
-
 const gameClockDisplay = document.querySelector('#game-clock-display');
-
 const timesUpLi = document.querySelector('#times-up-li');
-
 const flexTable = document.querySelector('#flex-table');
 
 let firstClick, userMatches, totalClicks, startClock, startTime, timesUp;
@@ -22,7 +19,7 @@ function makeGrid() {
     timesUpLi.className = null;
     clearInterval(startClock);
     flexTable.innerHTML = null;
-    flexTable.style.opacity = '1';
+    flexTable.style.opacity = null;
 
     // make icon index array
     let iconIndexArr = [];
