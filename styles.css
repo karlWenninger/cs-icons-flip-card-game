@@ -45,7 +45,8 @@ h3#title {
 
 li {
     text-align: left;
-    width: 82%;
+    width: 85%;
+    font-size: .85em;
 }
 
 table#stats {
@@ -57,7 +58,7 @@ th {
 }
 
 #instructions {
-    margin-bottom: 1em;
+    margin-bottom: 1.2em;
 }
 
 #click-count-display {
@@ -129,6 +130,7 @@ th {
 
     li {
         width: 70%;
+        font-size: 1em;
     }
 
     .cell {

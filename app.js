@@ -71,7 +71,6 @@ function gameClock() {
 fauxGridContainer.addEventListener('click', (e) => {
     // exit func
     if (e.target.className != 'cell' || timesUp == true) {
-        // console.log(e.target.className + ' ' + timesUp)
         return;
     } else {
         // start gameClock
