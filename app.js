@@ -3,7 +3,7 @@ const mainContain = document.querySelector('#main-contain');
 const clickCountDisplay = document.querySelector('#click-count-display');
 const gameClockDisplay = document.querySelector('#game-clock-display');
 const timesUpLi = document.querySelector('#times-up-li');
-const flexTable = document.querySelector('#flex-table');
+const fauxGridContainer = document.querySelector('#faux-grid-container');
 
 let firstClick, userMatches, totalClicks, startClock, startTime, timesUp;
 
@@ -18,15 +18,15 @@ function makeGrid() {
     timesUp = false;
     timesUpLi.className = null;
     clearInterval(startClock);
-    flexTable.innerHTML = null;
-    flexTable.style.opacity = null;
+    fauxGridContainer.innerHTML = null;
+    fauxGridContainer.style.opacity = null;
 
     // make icon index array
     let iconIndexArr = [];
     for (let i in icons) {
         iconIndexArr.push(i);
     }
-    // dupe entire array (each icon loads in flexTable twice)
+    // dupe entire array (each icon loads in fauxGridContainer twice)
     let iconIndexDupeArr = iconIndexArr.concat(iconIndexArr);
     // random sort indexes
     iconIndexDupeArr.sort((a, b) => 0.5 - Math.random());
@@ -38,19 +38,19 @@ function makeGrid() {
     const cellContent = document.createElement('i');
     cellContent.style.visibility = 'hidden';
 
-    // poplulate cells w icons, rows w cells, flexTable w rows
+    // poplulate cells w icons, rows w cells, fauxGridContainer w rows
     let cellCount = 1;
     for (let i of iconIndexDupeArr) {
         cellContent.classList = `${icons[i]} ${cellCount}`;
         cell.appendChild(cellContent);
         row.appendChild(cell.cloneNode(true));
         if (cellCount % 4 == 0) {
-            flexTable.appendChild(row.cloneNode(true));
+            fauxGridContainer.appendChild(row.cloneNode(true));
             row.innerHTML = null;
         }
         cellCount++;
     }
-    mainContain.appendChild(flexTable);
+    mainContain.appendChild(fauxGridContainer);
 }
 
 function gameClock() {
@@ -62,13 +62,13 @@ function gameClock() {
     }
     if (timeElapsed == 45) {
         timesUpLi.className = 'underline-flash';
-        flexTable.style.opacity = '0.5';
+        fauxGridContainer.style.opacity = '0.5';
         clearInterval(startClock);
         return timesUp = true;
     }
 }
 
-flexTable.addEventListener('click', (e) => {
+fauxGridContainer.addEventListener('click', (e) => {
     // exit func
     if (e.target.className != 'cell' || timesUp == true) {
         return;
