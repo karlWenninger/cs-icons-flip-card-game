@@ -71,6 +71,7 @@ function gameClock() {
 fauxGridContainer.addEventListener('click', (e) => {
     // exit func
     if (e.target.className != 'cell' || timesUp == true) {
+        // console.log(e.target.className + ' ' + timesUp)
         return;
     } else {
         // start gameClock
@@ -93,6 +94,7 @@ fauxGridContainer.addEventListener('click', (e) => {
                 if (userMatches == icons.length) {
                     // stop clock cuz game over
                     clearInterval(startClock);
+                    return timesUp = true;
                 }
                 return firstClick = null;
             }
