@@ -10,7 +10,7 @@
     max-width: 470px;
     width: 100%;
     margin-top: 1em;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
 }
 
 .faux-grid-container {
@@ -40,7 +40,7 @@
 }
 
 h3#title {
-    margin-bottom: 1em;
+    margin-bottom: .5em;
 }
 
 li {
@@ -123,6 +123,9 @@ th {
         margin-bottom: 2em;
     }
 
+    h3#title {
+        margin-bottom: 1em;
+    }
 
     li {
         width: 70%;
