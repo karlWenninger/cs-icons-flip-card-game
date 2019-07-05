@@ -9,13 +9,12 @@
 #main-contain {
     max-width: 470px;
     width: 100%;
-    margin-top: 5em;
+    margin-top: 1em;
 }
 
 .faux-grid-container {
-    width: 100%;
+    width: 95%;
     margin-bottom: 2em;
-
 }
 
 .row {
@@ -29,7 +28,7 @@
     padding-top: 25%;
     background: #ddd;
     border: solid #fff 3px;
-    font-size: 2.5em;
+    font-size: 2em;
 }
 
 .fas {
@@ -46,6 +45,7 @@ h3#title {
 
 li {
     text-align: left;
+    width: 82%;
 }
 
 table#stats {
@@ -58,7 +58,6 @@ th {
 
 #instructions {
     margin-bottom: 2em;
-    width: 320px;
 }
 
 #click-count-display {
@@ -113,4 +112,17 @@ th {
 
 .fa-sort-numeric-down {
     color: #4363d8;
+}
+
+@media only screen and (min-width: 471px) {
+    #main-contain {
+        margin-top: 5em;
+    }
+
+    li {
+        width: 70%;
+    }
+    .cell {
+        font-size: 2.5em;
+    }
 }
