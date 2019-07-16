@@ -1,7 +1,7 @@
 [Play the game!](https://karlwenninger.github.io/cs-icons-flip-card-game/)	
 
 
- [![Preview](mobile-preview.png)](https://karlwenninger.github.io/cs-history-trivia-quiz/)
+ [![Preview](mobile-preview.png)](https://karlwenninger.github.io/cs-icons-flip-card-game/)
 
 
 ## CS Icons Flip Card Game
@@ -20,7 +20,7 @@
 
 ## Authors
 
-* **Karl Wenninger** - *Initial work* - [karlWenninger](https://github.com/karlWenninger)
+* **Karl Wenninger** - [karlWenninger](https://github.com/karlWenninger)
 
 ## License
 
