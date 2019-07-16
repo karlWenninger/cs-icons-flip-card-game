@@ -1,4 +1,4 @@
-[Play the game!](https://karlwenninger.github.io/cs-history-trivia-quiz/)	
+[Play the game!](https://karlwenninger.github.io/cs-icons-flip-card-game/)	
 
 
  [![Preview](mobile-preview.png)](https://karlwenninger.github.io/cs-history-trivia-quiz/)
